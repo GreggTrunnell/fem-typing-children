@@ -7,6 +7,7 @@
  * React.ReactChildren;
  * React.ReactChild[];
  */
+//TODO: create nested components
 
 type BoxProps = { children: any /* 👈 Get rid of this! */ };
 
