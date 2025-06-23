@@ -9,13 +9,17 @@
  */
 //TODO: create nested components
 
-type BoxProps = { children: any /* 👈 Get rid of this! */ };
+import { PropsWithChildren } from "react";
 
-const Box = ({ children }: BoxProps) => {
+type BoxProps = PropsWithChildren<{
+  style: React.CSSProperties
+}>;
+
+const Box = ({ children, style }: BoxProps) => {
   return (
     <section
       className="m-4"
-      style={{ padding: '1em', border: '5px solid purple' }}
+      style={{ padding: '1em', border: '5px solid purple', margin: '3em', ...style }}
     >
       {children}
     </section>
