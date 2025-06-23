@@ -12,7 +12,9 @@
 import { PropsWithChildren } from "react";
 
 type BoxProps = PropsWithChildren<{
-  style: React.CSSProperties
+  //in tutorial instructors style didn't require ? but maybe that's because he 
+  //wasn't autosaving
+  style?: React.CSSProperties
 }>;
 
 const Box = ({ children, style }: BoxProps) => {
